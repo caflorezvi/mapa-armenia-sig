@@ -134,7 +134,11 @@ function cargarComunas() {
               p.name +
               "</b><br>" +
               "Población: " +
-              p.population.toLocaleString(),
+              (p.population ? p.population.toLocaleString() : "N/D") +
+              "<br>" +
+              "Área: " +
+              (p.area_km2 || "N/D") +
+              " km²",
           );
         },
       }).addTo(capaComunas);
@@ -162,6 +166,92 @@ leyenda.onAdd = function () {
 };
 
 leyenda.addTo(map);
+
+// ===============================
+// FILTROS – COMUNAS
+// ===============================
+
+function actualizarConteo() {
+  var n = capaGeoComunas ? capaGeoComunas.getLayers().length : 0;
+  document.getElementById("conteo").textContent = n + " comunas visibles";
+}
+
+function mostrarTodos() {
+  if (!datosComunas || !capaGeoComunas) return;
+  capaGeoComunas.clearLayers();
+  capaGeoComunas.addData(datosComunas);
+  document.getElementById("filtro-poblacion").value = "todos";
+  document.getElementById("buscar-comuna").value = "";
+  actualizarConteo();
+}
+
+function filtrarAreaGrande() {
+  if (!datosComunas || !capaGeoComunas) return;
+  var filtrado = datosComunas.features.filter(function (f) {
+    return f.properties.area_km2 > 3;
+  });
+  capaGeoComunas.clearLayers();
+  capaGeoComunas.addData(filtrado);
+  actualizarConteo();
+}
+
+function aplicarFiltroPoblacion() {
+  var valor = document.getElementById("filtro-poblacion").value;
+  if (!datosComunas || !capaGeoComunas) return;
+
+  var filtrado;
+  if (valor === "todos") {
+    filtrado = datosComunas.features;
+  } else if (valor === "menor25") {
+    filtrado = datosComunas.features.filter(function (f) {
+      return f.properties.population <= 25000;
+    });
+  } else if (valor === "25a35") {
+    filtrado = datosComunas.features.filter(function (f) {
+      var p = f.properties.population;
+      return p > 25000 && p <= 35000;
+    });
+  } else if (valor === "mayor35") {
+    filtrado = datosComunas.features.filter(function (f) {
+      return f.properties.population > 35000;
+    });
+  }
+
+  capaGeoComunas.clearLayers();
+  capaGeoComunas.addData(filtrado);
+  actualizarConteo();
+}
+
+function buscarPorNombre(texto) {
+  if (!datosComunas || !capaGeoComunas) return;
+  var t = texto.toLowerCase();
+  var filtrado = datosComunas.features.filter(function (f) {
+    var nombre = f.properties.name || "";
+    return nombre.toLowerCase().indexOf(t) !== -1;
+  });
+  capaGeoComunas.clearLayers();
+  capaGeoComunas.addData(filtrado);
+  actualizarConteo();
+}
+
+// ===============================
+// FILTROS – INFRAESTRUCTURA
+// ===============================
+
+function aplicarFiltroTipo() {
+  var valor = document.getElementById("filtro-tipo").value;
+  if (!datosInfraestructura || !capaGeoInfraestructura) return;
+
+  capaGeoInfraestructura.clearLayers();
+  if (valor === "todos") {
+    capaGeoInfraestructura.addData(datosInfraestructura);
+  } else {
+    var filtrado = datosInfraestructura.features.filter(function (f) {
+      return f.properties.tipo === valor;
+    });
+    capaGeoInfraestructura.addData(filtrado);
+  }
+}
 
 // ===============================
 // INICIAR

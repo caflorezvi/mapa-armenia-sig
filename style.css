@@ -146,3 +146,24 @@ body {
   border: 1px solid rgba(0,0,0,0.15);
   vertical-align: middle;
 }
+
+/* ============================= */
+/* Responsive – móviles          */
+/* ============================= */
+
+@media (max-width: 640px) {
+  body {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  #panel {
+    width: 100%;
+    padding: 14px;
+  }
+
+  #map {
+    min-height: 60vh;
+  }
+}

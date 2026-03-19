@@ -12,7 +12,8 @@
         "boundary": "administrative",
         "name": "Comuna Centenario",
         "type": "boundary",
-        "population": 25000
+        "population": 25000,
+        "area_km2": 5.3
       },
       "geometry": {
         "type": "Polygon",
@@ -2003,7 +2004,8 @@
         "boundary": "administrative",
         "name": "Comuna Rufino J. Cuervo",
         "type": "boundary",
-        "population": 22000
+        "population": 22000,
+        "area_km2": 3.19
       },
       "geometry": {
         "type": "Polygon",
@@ -4282,7 +4284,8 @@
         "boundary": "administrative",
         "name": "Comuna Alfonso López",
         "type": "boundary",
-        "population": 42000
+        "population": 42000,
+        "area_km2": 2.41
       },
       "geometry": {
         "type": "Polygon",
@@ -6629,7 +6632,8 @@
         "boundary": "administrative",
         "name": "Comuna Francisco de Paula Santander",
         "type": "boundary",
-        "population": 35000
+        "population": 35000,
+        "area_km2": 1.82
       },
       "geometry": {
         "type": "Polygon",
@@ -7844,7 +7848,8 @@
         "boundary": "administrative",
         "name": "Comuna El Bosque",
         "type": "boundary",
-        "population": 25000
+        "population": 25000,
+        "area_km2": 1.29
       },
       "geometry": {
         "type": "Polygon",
@@ -9459,7 +9464,8 @@
         "boundary": "administrative",
         "name": "Comuna San José",
         "type": "boundary",
-        "population": 38000
+        "population": 38000,
+        "area_km2": 2.69
       },
       "geometry": {
         "type": "Polygon",
@@ -11414,7 +11420,8 @@
         "boundary": "administrative",
         "name": "Comuna El Cafetero",
         "type": "boundary",
-        "population": 30000
+        "population": 30000,
+        "area_km2": 2.51
       },
       "geometry": {
         "type": "Polygon",
@@ -12469,7 +12476,8 @@
         "boundary": "administrative",
         "name": "Comuna Libertadores",
         "type": "boundary",
-        "population": 28000
+        "population": 28000,
+        "area_km2": 1.1
       },
       "geometry": {
         "type": "Polygon",
@@ -13528,7 +13536,8 @@
         "boundary": "administrative",
         "name": "Comuna Fundadores",
         "type": "boundary",
-        "population": 20000
+        "population": 20000,
+        "area_km2": 1.42
       },
       "geometry": {
         "type": "Polygon",
@@ -14487,7 +14496,8 @@
         "boundary": "administrative",
         "name": "Comuna Quimbaya",
         "type": "boundary",
-        "population": 43000
+        "population": 43000,
+        "area_km2": 9.86
       },
       "geometry": {
         "type": "Polygon",
@@ -17973,7 +17983,8 @@
               "type": "boundary"
             }
           }
-        ]
+        ],
+        "area_km2": 0
       },
       "geometry": {
         "type": "Point",
@@ -17999,7 +18010,8 @@
               "type": "boundary"
             }
           }
-        ]
+        ],
+        "area_km2": 0
       },
       "geometry": {
         "type": "Point",
