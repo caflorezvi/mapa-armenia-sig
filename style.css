@@ -1,0 +1,148 @@
+/* ============================= */
+/* Reset básico */
+/* ============================= */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: #eef3f7; /* fondo pastel */
+}
+
+/* ============================= */
+/* Contenedor general */
+/* ============================= */
+
+body {
+  display: flex;
+  gap: 16px;                 /* separación entre panel y mapa */
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/* Panel */
+/* ============================= */
+
+#panel {
+  width: 260px;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 12px;       /* bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* sombra suave */
+  border: 1px solid #e1e6eb;
+}
+
+/* título */
+#panel h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* contador */
+#conteo {
+  font-size: 14px;
+  color: #6b7a8c;
+  margin-bottom: 10px;
+}
+
+/* ============================= */
+/* Botones */
+/* ============================= */
+
+#panel button {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+#panel button,
+#panel select,
+#panel input {
+  box-sizing: border-box; /* 🔹 clave para que no se salga */
+}
+
+#panel button:hover {
+  background: #357abd;
+}
+
+/* ============================= */
+/* Select */
+/* ============================= */
+
+#panel select {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 7px;
+  border-radius: 8px;
+  border: 1px solid #ccd3da;
+  font-size: 14px;
+}
+
+/* ============================= */
+/* Input */
+/* ============================= */
+
+#panel input {
+  width: 100%;
+  padding: 7px;
+  border-radius: 8px;
+  border: 1px solid #ccd3da;
+  font-size: 14px;
+}
+
+/* ============================= */
+/* Mapa */
+/* ============================= */
+
+#map {
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid #e1e6eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Leaflet necesita altura explícita */
+.leaflet-container {
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* ============================= */
+/* Leyenda */
+/* ============================= */
+
+.leyenda {
+  background: #ffffff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e1e6eb;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  font-size: 13px;
+  line-height: 18px;
+  color: #2c3e50;
+}
+
+.leyenda h4 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.leyenda span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.15);
+  vertical-align: middle;
+}

@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Hospital San Juan de Dios",
+        "tipo": "Hospital",
+        "capacidad": 250
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.6566, 4.5559]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Universidad del Quindío",
+        "tipo": "Universidad",
+        "capacidad": 15000
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.6593, 4.5565]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Colegio INEM José Celestino Mutis",
+        "tipo": "Colegio",
+        "capacidad": 3500
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.667875, 4.551026]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Alcaldía de Armenia - CAM",
+        "tipo": "Edificio público",
+        "capacidad": 500
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.672360, 4.536210]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Parque de la Vida",
+        "tipo": "Parque",
+        "capacidad": 2000
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.6597, 4.5478]
+      }
+    }
+  ]
+}
