@@ -114,7 +114,12 @@ function cargarComunas() {
       return res.json();
     })
     .then(function (data) {
-      datosComunas = data;
+      datosComunas = {
+        type: "FeatureCollection",
+        features: data.features.filter(function (f) {
+          return f.geometry.type === "Polygon" || f.geometry.type === "MultiPolygon";
+        }),
+      };
 
       capaGeoComunas = L.geoJSON(null, {
         style: function (feature) {
